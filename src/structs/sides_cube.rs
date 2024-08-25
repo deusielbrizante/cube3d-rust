@@ -46,7 +46,7 @@ impl ValuesToCalculateIJK {
     }
 }
 
-pub struct StaticValues {
+pub struct ConstValues {
     pub width: i32,
     pub height: i32,
     pub cube_width: f32,
@@ -56,7 +56,7 @@ pub struct StaticValues {
     pub k1: f32,
 }
 
-impl StaticValues {
+impl ConstValues {
     pub const fn new() -> Self {
         Self {
             width: 280,

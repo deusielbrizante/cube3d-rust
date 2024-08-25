@@ -1,4 +1,4 @@
-use crate::structs::sides_cube::{IncrementalValuesABC, SidesCubeXYZ, StaticValues, ValuesToCalculateIJK};
+use crate::structs::sides_cube::{IncrementalValuesABC, SidesCubeXYZ, ConstValues, ValuesToCalculateIJK};
 
 pub fn calculate_x(incremental_values_abc: &IncrementalValuesABC, values_calc_ijk: &ValuesToCalculateIJK) -> f32 {
     values_calc_ijk.j * incremental_values_abc.a.sin() * incremental_values_abc.b.sin() * incremental_values_abc.c.cos()
@@ -23,7 +23,7 @@ pub fn calculate_z(incremental_values_abc: &IncrementalValuesABC, values_calc_ij
 }
 
 pub fn calculate_for_surface(incremental_values_abc: &IncrementalValuesABC, cube_xyz: &mut SidesCubeXYZ, values_calc_ijk: &ValuesToCalculateIJK,
-                             ch: char, static_values: &StaticValues, z_buff: &mut Vec<f32>, buffer: &mut Vec<char>, cube_width: f32) {
+                             ch: char, static_values: &ConstValues, z_buff: &mut Vec<f32>, buffer: &mut Vec<char>, cube_width: f32) {
     cube_xyz.x = calculate_x(incremental_values_abc, values_calc_ijk);
     cube_xyz.y = calculate_y(incremental_values_abc, values_calc_ijk);
     cube_xyz.z = calculate_z(incremental_values_abc, values_calc_ijk) + static_values.distance_from_cam as f32;
