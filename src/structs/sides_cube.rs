@@ -5,11 +5,11 @@ pub struct IncrementalValuesABC {
 }
 
 impl IncrementalValuesABC {
-    pub(crate) fn new() -> Self {
+    pub fn new() -> Self {
         Self { a: 0.0, b: 0.0, c: 0.0 }
     }
 
-    pub(crate) fn new_abc(a: f32, b: f32, c: f32) -> Self {
+    pub fn new_abc(a: f32, b: f32, c: f32) -> Self {
         Self { a, b, c }
     }
 }
@@ -21,11 +21,11 @@ pub struct SidesCubeXYZ {
 }
 
 impl SidesCubeXYZ {
-    pub(crate) fn new() -> Self {
+    pub fn new() -> Self {
         Self { x: 0.0, y: 0.0, z: 0.0 }
     }
 
-    pub(crate) fn new_xyz(x: f32, y: f32, z: f32) -> Self {
+    pub fn new_xyz(x: f32, y: f32, z: f32) -> Self {
         Self { x, y, z }
     }
 }
@@ -37,7 +37,7 @@ pub struct ValuesToCalculateIJK {
 }
 
 impl ValuesToCalculateIJK {
-    pub(crate) fn new() -> Self {
+    pub fn new() -> Self {
         Self { i: 0.0, j: 0.0, k: 0.0 }
     }
 
